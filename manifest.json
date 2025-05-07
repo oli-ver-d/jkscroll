@@ -2,7 +2,7 @@
   "name": "jk scroll",
   "description": "Scroll with j and k",
   "manifest_version": 2,
-  "version": "1.14",
+  "version": "1.15",
   "content_scripts": [{
     "matches": ["<all_urls>"],
     "js": ["content-script.js"],
@@ -13,7 +13,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "jkscroll@h43z"
+      "id": "jkscroll@oli-ver-d"
     }
   },
   "permissions": ["activeTab", "sessions"]

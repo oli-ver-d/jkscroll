@@ -6,8 +6,8 @@ const generatorIterateInputs = iterateInputs()
 const actions = {
   'j': _=> scrollTarget.scrollBy(0, 50),
   'k': _=> scrollTarget.scrollBy(0, -50),
-  'h': _=> history.back(),
-  'l': _=> history.forward(),
+  'h': _=> chrome.runtime.sendMessage('h'),
+  'l': _=> chrome.runtime.sendMessage('l'),
   't': _=> chrome.runtime.sendMessage('t'),
   'w': _=> chrome.runtime.sendMessage('w'),
   // setTimeout seems to fix pressing escape in google search
@@ -17,8 +17,8 @@ const actions = {
   'r': _=> location.reload(),
   'Enter': _=> clickOnTextSelection(),
   'i': _=> generatorIterateInputs.next(),
-  'n': _=> chrome.runtime.sendMessage('n'),
-  'p': _=> chrome.runtime.sendMessage('p')
+  'p': _=> history.back(),
+  'n': _=> history.forward(),
 }
 
 function* iterateInputs(){

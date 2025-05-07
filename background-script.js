@@ -10,12 +10,12 @@ chrome.runtime.onMessage.addListener(cmd => {
       browser.sessions.getRecentlyClosed({maxResults: 1})
         .then(s => browser.sessions.restore(s[0].sessionId))
     break;
-    case 'n':
-    case 'p':
+    case 'h':
+    case 'l':
       // move focus to next or previous tab
       browser.tabs.query({currentWindow: true})
         .then(tabs => {
-          const direction = cmd === 'p' ? -1 : +1
+          const direction = cmd === 'h' ? -1 : +1
           const activeIndex = tabs.find(tab => tab.active).index
           // allow cycling through tabs
           const futureActiveIndex = (activeIndex + direction + tabs.length) % tabs.length

@@ -1,5 +1,5 @@
 # jk scroll
-vim inspired shortcuts for your [browser](https://addons.mozilla.org/en-US/firefox/addon/jk-scroll/) by [@h43z](https://twitter.com/h43z).
+vim inspired shortcuts for your [browser](https://addons.mozilla.org/en-US/firefox/addon/jk-scroll/) by [@h43z](https://twitter.com/h43z). Edited by Oliver Dennis to swap the n and p with the h and l keys.
 
 Many browser extensions have permissions that grant them full access to every
 website you visit and often they need to. And so does this one.
@@ -14,8 +14,8 @@ Shortcut list
 // content-script.js
 j       => scroll down
 k       => scroll up
-h       => go back one page in history (if end reached closes tab)
-l       => go forward one page in history
+l       => focus tab to the right (next)
+h       => focus tab to the left (previous)
 t       => reopen last closed tab
 w       => close tab
 Escape  => remove focus from active element
@@ -24,8 +24,8 @@ gg      => go to top of page
 r       => reload tab
 Enter   => click on selected text (useful for / and CTRL+f search)
 i       => focus next Input element
-n       => focus tab to the right (next)
-p       => focus tab to the left (previous)
+p       => go back one page in history (if end reached closes tab)
+n       => go forward one page in history
 
 
 // background-script.js
