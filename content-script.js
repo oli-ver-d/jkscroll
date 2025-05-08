@@ -9,6 +9,7 @@ const actions = {
   'h': _=> chrome.runtime.sendMessage('h'),
   'l': _=> chrome.runtime.sendMessage('l'),
   't': _=> chrome.runtime.sendMessage('t'),
+  'u': _=> chrome.runtime.sendMessage('u'),
   'w': _=> chrome.runtime.sendMessage('w'),
   // setTimeout seems to fix pressing escape in google search
   'Escape': _=> setTimeout(_=>document.activeElement.blur(), 5),

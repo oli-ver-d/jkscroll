@@ -6,6 +6,15 @@ chrome.runtime.onMessage.addListener(cmd => {
         .then(tab => browser.tabs.remove(tab[0].id))
     break;
     case 't':
+      browser.tabs.query({active: true, currentWindow: true})
+        .then(tabs => {
+          const currentTab = tabs[0];
+          return browser.tabs.create({index: currentTab.index + 1,
+          });
+        })
+        .catch(err => console.error("Failed to create new tab:", err));
+    break;
+    case 'u':
       // restore previous closed tab
       browser.sessions.getRecentlyClosed({maxResults: 1})
         .then(s => browser.sessions.restore(s[0].sessionId))
