@@ -32,7 +32,8 @@ n       => go forward one page in history
 // this functionality needs the browser extension API.
 // Only so called background scripts have access to it.
 w     => close tab
-t     => reopen last closed tab
+t     => new tab
+u     => reopen last closed tab
 ```
 
 To disable jkscroll for a specific website create a localStorage item with the
